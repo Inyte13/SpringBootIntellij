@@ -1,0 +1,83 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### Spring Boot ###
+# Logs
+*.log
+logs/
+spring.log
+
+# Archivos generados por Spring Boot DevTools
+.spring-boot-devtools.properties
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.ipr
+
+# Configuración de usuario en IntelliJ (no compartir)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/usage.statistics.xml
+.idea/**/assetWizardSettings.xml
+.idea/**/libraries/
+
+# Carpetas de compilación de IntelliJ
+out/
+
+### VSCode ###
+.vscode/
+.history/
+
+### Sistema Operativo ###
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+### Archivos temporales / generales ###
+*.tmp
+*.bak
+*.orig
+*.swp
+*.swo
+
+### Node.js (si usas React en la misma repo) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+### Python (por si mezclas cosas de automatización) ###
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+venv/
+
+### Coverage / Testing ###
+coverage/
+.nyc_output/
+.cache/
