@@ -1,4 +1,4 @@
-package com.inyte.teoria;
+package com.inyte.banco;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

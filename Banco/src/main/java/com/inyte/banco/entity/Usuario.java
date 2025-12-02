@@ -1,4 +1,4 @@
-package com.inyte.teoria.entity;
+package com.inyte.banco.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
