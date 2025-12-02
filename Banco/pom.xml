@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.inyte</groupId>
-	<artifactId>teoria</artifactId>
+	<artifactId>Banco</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>teoria</name>
 	<description>Demo project for Spring Boot</description>
@@ -43,11 +43,11 @@
         </dependency>
 
         <!-- H2 para practicar sin MySQL -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.h2database</groupId>-->
+<!--            <artifactId>h2</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
 
         <!-- MySQL (cuando lo uses de verdad) -->
         <dependency>
