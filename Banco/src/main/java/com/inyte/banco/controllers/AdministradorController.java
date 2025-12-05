@@ -19,4 +19,9 @@ public class AdministradorController {
     return administradorService.registrarAdmin(admin, creador.getIdPersona());
   }
 
+  @GetMapping("/hola")
+  public String hola() {
+    return "Hola mundo";
+  }
+
 }

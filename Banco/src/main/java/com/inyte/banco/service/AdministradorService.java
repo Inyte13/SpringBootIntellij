@@ -10,4 +10,5 @@ public interface AdministradorService {
   Administrador registrarAdmin(Administrador admin, Long idCreador);
 
 
+
 }
