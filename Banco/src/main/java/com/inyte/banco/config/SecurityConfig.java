@@ -2,13 +2,16 @@ package com.inyte.banco.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,12 +25,37 @@ import java.util.List;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableMethodSecurity // Para las anotaciones
 public class SecurityConfig {
+
+// sin anotaciones
+
+//  @Bean
+//  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+//    return httpSecurity
+//        .csrf(csrf -> csrf.disable())
+//        .httpBasic(Customizer.withDefaults()) // Solo cuando uses usuario y contraseña
+//        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//        .authorizeHttpRequests(http -> {
+//          // 1. se configura los endpoints públicos
+//          http.requestMatchers(HttpMethod.GET, "/admin/hola").permitAll();
+//
+//          // 2. se configura los endpoints privados
+//          http.requestMatchers(HttpMethod.GET, "/admin/protected").hasAuthority("CREATE");
+//
+//          // 3. se configura los endpoints no especificados
+//          http.anyRequest().denyAll();
+//        })
+//        .build();
+//  }
 
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-    return httpSecurity.build();
+    return httpSecurity
+        .csrf(csrf -> csrf.disable())
+        .httpBasic(Customizer.withDefaults()) // Solo cuando uses usuario y contraseña
+        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .build();
   }
 
   @Bean
